@@ -53,3 +53,29 @@ product1.displayInfo();
 console.log(`Total price with tax: $${product1.calculateTotal(0.1)}`);
 product2.displayInfo();
 console.log(`Total price with tax: $${product2.calculateTotal(0.1)}`);
+
+// static method = a method that belongs to the class itself, not to any specific object created from the class
+class MathUtil{
+    static PI = 3.14159;
+
+    static getCircleArea(radius) {
+        return this.PI * radius * radius;
+    }
+}
+
+console.log("MathUtil.PI =", MathUtil.PI);
+console.log("Area of circle with radius 5:", MathUtil.getCircleArea(5));
+
+class User {
+    static userCount = 0;
+
+    constructor(username) {
+        this.username = username;
+        User.userCount++;
+    }
+}
+
+const user1 = new User("Perry");
+const user2 = new User("Pororo");
+const user3 = new User("Loopy");
+console.log("Total users created:", User.userCount);
