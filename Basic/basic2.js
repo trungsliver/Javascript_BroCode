@@ -39,3 +39,11 @@ console.log(finalName)
     // with method chaning
 let finalNameChained = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase()
 console.log(finalNameChained)
+
+// ========== Strict equality ==========
+    // = assignment operator
+    // == equality operator (compare if value are equal)
+    // === strict equality operator (compare if value and type are equal)
+    // != inequality operator
+    // !== strict inequality operator
+
