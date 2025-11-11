@@ -79,3 +79,27 @@ function sumAll(...numbers) {
     return total;
 }
 console.log(sumAll(1, 2, 3, 4, 5));  
+
+// ===================== Array.map() ==========================
+// accepts a callback function and applies that function to each element in an array, then returns a new array
+function square(number) {
+    return number * number
+}
+const numbers = [1, 2, 3, 4, 5]
+const squareNumbers = numbers.map(square)
+console.log(squareNumbers)
+
+function toUpperCase(name) {
+    return name.toUpperCase()
+}
+const students = ["Spongebob", "Patrick", "Sandy", "Mr. Krabs"]
+const upperCaseStudents = students.map(toUpperCase)
+console.log(upperCaseStudents)
+
+function formatDate(dateString) {
+    const parts = dateString.split("-");
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
+}
+const dates = ["2025-10-01", "2025-11-15", "2025-12-31"]
+const formattedDates = dates.map(formatDate)
+console.log(formattedDates)
