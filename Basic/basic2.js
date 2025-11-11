@@ -47,3 +47,35 @@ console.log(finalNameChained)
     // != inequality operator
     // !== strict inequality operator
 
+// ========== Spread operator & Rest operator ==========
+    // Spread operator: unpacking elements of an array or object
+let arr1 = [1, 2, 3]
+let arr2 = [4, 5, 6]
+let combinedArr = [...arr1, ...arr2]
+console.log(combinedArr)
+
+let max1 = Math.max(arr1) 
+console.log("usual:", max1)  // incorrect, because Math.max expects a list of numbers, not an array
+let max2 = Math.max(...arr1)
+console.log("correct:", max2)  // correct
+
+    // Rest operator: packing multiple elements into an array
+const food1 = "pizza"
+const food2 = "hamburger"
+const food3 = "sushi"
+const food4 = "pasta"
+const food5 = "salad"
+
+function getFoodList(...foods) {
+    return foods;
+}
+console.log(getFoodList(food1, food2, food3, food4, food5));
+
+function sumAll(...numbers) {
+    let total = 0;
+    for (let num of numbers) {
+        total += num;
+    }
+    return total;
+}
+console.log(sumAll(1, 2, 3, 4, 5));  
