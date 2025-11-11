@@ -103,3 +103,18 @@ function formatDate(dateString) {
 const dates = ["2025-10-01", "2025-11-15", "2025-12-31"]
 const formattedDates = dates.map(formatDate)
 console.log(formattedDates)
+
+// =================== Array.filter() ========================
+// creates a new array with all elements that pass the test implemented by the provided function
+function isEven(number) {
+    return number % 2 === 0
+}   
+let evenNumsbers = numbers.filter(isEven)
+console.log(evenNumsbers)
+
+function getShortWords(word) {
+    return word.length <= 6
+}
+let words = ["apple", "banana", "cherry", "watermelon", "kiwi", "grape"]
+let shortWords = words.filter(getShortWords)
+console.log(shortWords)
