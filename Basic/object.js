@@ -79,3 +79,49 @@ const user1 = new User("Perry");
 const user2 = new User("Pororo");
 const user3 = new User("Loopy");
 console.log("Total users created:", User.userCount);
+
+// inheritance = allows a class to inherit properties and methods from existing class (parent -> child)
+                // helps with code reusability and organization
+class Animal {
+    alive = true;
+
+    eat() {
+        console.log(`${this.name} is eating.`);
+    }
+
+    sleep() {
+        console.log(`${this.name} is sleeping.`);
+    }
+}
+
+class Rabbit extends Animal {
+    constructor(name) {
+        super();
+        this.name = name;
+    }   
+    run() {
+        console.log(`${this.name} is running.`);
+    } 
+}
+
+class Fish extends Animal {
+    alive = false;
+    
+    constructor(name) {
+        super();
+        this.name = name;
+    }   
+    swim() {
+        console.log(`${this.name} is swimming.`);
+    } 
+}
+
+const rabbit1 = new Rabbit("Bunny");
+console.log("Is rabbit alive?", rabbit1.alive);
+rabbit1.eat();
+rabbit1.run();
+
+const fish1 = new Fish("Nemo");
+console.log("Is fish alive?", fish1.alive);
+fish1.eat();
+fish1.swim();
