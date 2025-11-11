@@ -106,7 +106,7 @@ class Rabbit extends Animal {
 
 class Fish extends Animal {
     alive = false;
-    
+
     constructor(name) {
         super();
         this.name = name;
@@ -125,3 +125,26 @@ const fish1 = new Fish("Nemo");
 console.log("Is fish alive?", fish1.alive);
 fish1.eat();
 fish1.swim();
+
+// getter & setter = special methods that provide controlled access to an object's properties
+class BankAccount {
+    constructor(accountNumber, balance) {
+        this.accountNumber = accountNumber;
+        this._balance = balance;  // private property convention
+    }   
+    get balance() {
+        return this._balance;
+    }
+    set balance(amount) {
+        if (amount < 0) {
+            console.log("Error: Balance cannot be negative.");
+        } else {
+            this._balance = amount;
+            console.log(`Balance updated to $${this._balance}`);
+        }
+    }
+}
+const account1 = new BankAccount("123456", 1000);
+console.log("Initial balance:", account1.balance);
+account1.balance = 1500;
+console.log("Updated balance:", account1.balance);
