@@ -118,3 +118,18 @@ function getShortWords(word) {
 let words = ["apple", "banana", "cherry", "watermelon", "kiwi", "grape"]
 let shortWords = words.filter(getShortWords)
 console.log(shortWords)
+
+// =================== Array.reduce() ======================== 
+// reduce the elements of an array to a single value 
+function sum(total, number) {
+    return total + number
+}
+const prices = [5, 30, 15, 10, 20, 50]
+const totalPrice = prices.reduce(sum)
+console.log(totalPrice)
+
+function getMinimum(min, number) {
+    return Math.min(min, number)
+}
+const minPrice = prices.reduce(getMinimum)
+console.log(minPrice)
