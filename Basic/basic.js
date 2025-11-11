@@ -163,6 +163,13 @@ if (0 <= score && score < 5){
     console.log('Nhập sai dữ liệu');
 }
 
+    // ternary operator - shortcut if-else statement
+        // condition ? codeIfTrue : codeIfFalse
+age = 17;
+let canVote = (age >= 18) ? 'Có thể bầu cử' : 'Chưa đủ tuổi bầu cử';
+console.log(canVote);
+
+
 // vòng lặp
     // Vòng lặp for
 for (let i = 1; i <= 5; i++){
