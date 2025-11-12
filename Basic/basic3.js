@@ -56,3 +56,29 @@ function displayPerson({firstName, lastName, age, job="Unemployed"}) {
 
 displayPerson(person1);
 displayPerson(person2);
+
+// ================== Nested Object =====================
+    // nested object = object inside another object
+    // allows your to represent more complex data structures
+    // child object is enclosed by a parent object
+
+    // Person{Adress{}, Contact{}}
+    //ShoppingCart{Item{}, Payment{}}
+
+const person = {
+    fullName: "Spongebob Squarepants",
+    age: 20,
+    isStudent: true,
+    hobbies: ["Cooking", "Joking", "Karate"],
+    address: {
+        street: "123 Ocean Ave",
+        city: "Bikini Bottom",
+        country: "Ocean"
+    }
+}
+
+console.log("Full Name:", person.fullName);
+console.log("Age:", person.age);
+console.log("Is Student:", person.isStudent);
+console.log("Hobbies:", person.hobbies.join(", "));
+console.log("Address:", `${person.address.street}, ${person.address.city}, ${person.address.country}`);
