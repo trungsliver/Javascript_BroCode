@@ -82,3 +82,26 @@ console.log("Age:", person.age);
 console.log("Is Student:", person.isStudent);
 console.log("Hobbies:", person.hobbies.join(", "));
 console.log("Address:", `${person.address.street}, ${person.address.city}, ${person.address.country}`);
+
+
+class Address {
+    constructor(street, city, country) {
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+class Person {
+    constructor(name, age, ...address) {
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+}
+
+const personA = new Person("Spongebob Squarepants", 20, "123 Ocean Ave", "Bikini Bottom", "Ocean");
+console.log("Person A:", personA);
+
+const personB = new Person("Patrick Star", 22, "456 Rock St", "Bikini Bottom", "Ocean");
+console.log("Person B:", personB);
