@@ -105,3 +105,26 @@ console.log("Person A:", personA);
 
 const personB = new Person("Patrick Star", 22, "456 Rock St", "Bikini Bottom", "Ocean");
 console.log("Person B:", personB);
+
+// ================ Arrays of Objects ==================
+const fruits = [
+    {name: "Apple", color: "Red", price: 1.2},
+    {name: "Banana", color: "Yellow", price: 0.5},
+    {name: "Orange", color: "Orange", price: 0.8},
+    {name: "Grapes", color: "Purple", price: 2.0},
+    {name: "Mango", color: "Yellow", price: 1.5}
+];
+
+console.log("Fruits List:");
+fruits.forEach(fruit => {
+    console.log(`${fruit.name}: Color = ${fruit.color}, Price = $${fruit.price}`);
+});
+
+fruits.push({name: "Pineapple", color: "Brown", price: 3.0});
+console.log("After adding Pineapple:", fruits);
+
+const fruitNames = fruits.map(fruit => fruit.name);
+console.log("Fruit Names:", fruitNames);
+
+const yellowFruits = fruits.filter(fruit => fruit.color === "Yellow");
+console.log("Yellow Fruits:", yellowFruits);
